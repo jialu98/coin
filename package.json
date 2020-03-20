@@ -4,7 +4,9 @@
   "description": "front end",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir dist && cp index.html dist/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "yarn run build && aws s3 cp dist/ s3://www.stampit.club --recursive"
   },
   "author": "",
   "license": "ISC",
