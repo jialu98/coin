@@ -4,9 +4,9 @@
   "description": "front end",
   "main": "app.js",
   "scripts": {
-    "build": "mkdir dist && cp index.html dist/index.html",
+    "build": "mkdir -p dist && cp index.html dist/index.html",
     "test": "echo \"no test specified\"",
-    "deploy": "yarn run build && aws s3 cp dist/ s3://www.stampit.club --recursive"
+    "deploy": "yarn run build && aws s3 --profile deployer cp dist/ s3://www.stampit.club --recursive"
   },
   "author": "",
   "license": "ISC",
